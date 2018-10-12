@@ -3,7 +3,6 @@ var main_path_app = '/fslacro/';
 var service_worker_name = 'fslacrosw.js';
 var service_worker_path = main_path_app + service_worker_name;
 
-/*
 if ('serviceWorker' in navigator) {
   //navigator.serviceWorker.register('/offline/00/sw.js', { scope: '/offline/00/' }).then(function(reg) {
   navigator.serviceWorker.register(service_worker_path, { scope: main_path_app }).then(function(reg) {
@@ -21,4 +20,3 @@ if ('serviceWorker' in navigator) {
     console.log('Registration failed with ' + error);
   });
 }
-*/
