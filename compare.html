@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Land Rover - Jaguar | Loan</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:image" content="http://andresmendoza.io/images/logo-Both.jpg">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1024">
+	<meta property="og:image:height" content="1024">
+	<!--===============================================================================================-->
+	<!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico"/> -->
+
+	<link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="images/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<div class="logo">
+				<img class="logo-img" src="images/logo-uk-borh.png" alt="Logo">
+				<a href="index.html"><div class="logo-type">Financial Services</div></a>
+			</div>
+			<div class="padder">
+				<form class="contact100-form validate-form" id="main_form">
+					<!--<span class="contact100-form-title">Crédito</span>-->
+
+					<!-- Select Plan -->
+					<div class="">
+						<select id="plan_name_tag">
+              <option value="MEMBERSHIP">Membership</option>
+              <option value="EXCLUSIVE">Exclusive</option>
+              <option value="ELITE">Elite</option>
+              <option value="GANCHO">Go Premium</option>
+							<option value="TAYLORMADE">Taylor-made</option>
+							<option value="PLATINUM">Platinum</option>
+            </select>
+					</div>
+
+					<!-- Price and Rate-->
+					<div class="">
+						<div class="leftPercent">
+							<div class="wrap-input100">
+								<span class="label-input100">Precio del vehículo <span class="required-highlight">*</span></span>
+								<div class="single-icon">
+									<div class="left-input">
+										<div class="fa-icon-center"><i class="fas fa-money-bill-alt"></i></div>
+										<!-- <div class="fa-icon-center"><i class="fa fa-usd"></i></div> -->
+									</div>
+									<div class="right-input">
+										<input class="input100 numMask inputUICK amountVarClass" type="text" name="price_tag" id="price_tag" placeholder="Precio" pattern="[0-9]*">
+										<span class="focus-input100"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rightPercent">
+							<div class="wrap-input100 validate-input" data-validate="Ingrese el interés">
+								<span class="label-input100">Tasa de Interés <span class="required-highlight">*</span></span>
+								<div class="single-icon">
+									<div class="left-input">
+										<!-- <div class="fa-icon-center"><i class="fa fa-percent"></i></div> -->
+										<div class="fa-icon-center"><i class="fa fa-coins"></i></div>
+										<!-- <div class="fa-icon-center"><i class="fa fa-viacoin"></i></div> -->
+									</div>
+									<div class="right-input">
+										<!-- <input class="input100 req-field inputUICK" type="number" name="rate_tag" id="rate_tag" placeholder="Mensual">
+										<span class="focus-input100"></span> -->
+										<div>
+											<div class="pertcentNum">
+												<input class="input100" type="text" name="rate_tag" id="rate_tag" placeholder="">
+											</div>
+											<div class="percentSymbol">
+												<input class="input100 percentSymbolInput" type="text" placeholder="%" disabled>
+											</div>
+										</div>
+										<span class="focus-input100"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Term and Grace -->
+					<div class="">
+						<div class="leftPercent">
+							<div class="wrap-input100">
+								<span class="label-input100">Plazo en Meses <span class="required-highlight">*</span></span>
+								<div class="single-icon">
+									<div class="left-input">
+										<div class="fa-icon-center"><i class="fas fa-calendar-alt"></i></div>
+									</div>
+									<div class="right-input">
+										<input class="input100 req-field inputUICK" type="number" name="months_tag" id="months_tag" placeholder="Meses">
+										<span class="focus-input100"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rightPercent">
+							<div class="wrap-input100 validate-input" data-validate="Ingrese el interés">
+								<span class="label-input100">Período de Gracia</span>
+								<div class="single-icon">
+									<div class="left-input">
+										<div class="fa-icon-center"><i class="fas fa-handshake"></i></div>
+									</div>
+									<div class="right-input">
+										<input class="input100 req-field inputUICK" type="number" name="grace_tag" id="grace_tag" placeholder="Meses">
+										<span class="focus-input100"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- initial Payment -->
+					<div>
+						<span class="label-input100">Cuota Inicial</span>
+						<div>
+							<div class="leftPercent">
+								<div class="wrap-input100">
+									<div class="single-icon">
+										<div class="left-input">
+											<div class="fa-icon-center"><i class="fas fa-sort-amount-down"></i></div>
+										</div>
+										<div class="right-input">
+											<input class="input100 numMask inputUICK amountVarClass" type="text" name="down_payment_value_tag" id="down_payment_value_tag" placeholder="$">
+											<span class="focus-input100"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rightPercent">
+								<div class="wrap-input100">
+									<div class="single-icon">
+										<div class="left-input">
+											<div class="fa-icon-center"><i class="fas fa-sort-amount-down"></i></div>
+										</div>
+										<div class="right-input">
+											<div>
+												<div class="pertcentNum">
+													<input class="input100" type="text" name="down_payment_tag" id="down_payment_tag" placeholder="">
+												</div>
+													<div class="percentSymbol">
+														<input class="input100 percentSymbolInput" type="text" placeholder="%" disabled>
+												</div>
+													</div>
+													<span class="focus-input100"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Final Payment -->
+							<div>
+								<span class="label-input100">Cuota Residual</span>
+								<div>
+									<div class="leftPercent">
+										<div class="wrap-input100">
+											<div class="single-icon">
+												<div class="left-input">
+													<div class="fa-icon-center"><i class="fas fa-angle-double-down"></i></div>
+												</div>
+												<div class="right-input">
+													<input class="input100 numMask inputUICK" type="text" name="residual_payment_value_tag" id="residual_payment_value_tag" placeholder="$">
+													<span class="focus-input100"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="rightPercent">
+										<div class="wrap-input100">
+											<div class="single-icon">
+												<div class="left-input">
+													<div class="fa-icon-center"><i class="fas fa-angle-double-down"></i></div>
+												</div>
+												<div class="right-input">
+													<div>
+														<div class="pertcentNum">
+															<input class="input100" type="text" name="residual_payment_tag" id="residual_payment_tag" placeholder="">
+														</div>
+															<div class="percentSymbol">
+																<input class="input100 percentSymbolInput" type="text" placeholder="%" disabled>
+															</div>
+															</div>
+															<span class="focus-input100"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Timeline -->
+									<div>
+										<span class="contact100-form-title">Línea de Tiempo</span>
+										<div class="timeline_div" >
+											<img class="timeline_div_img" id="timeline_div" src="" alt="Plan Image">
+										</div>
+									</div>
+
+									<!-- Amount -->
+									<!-- <div>
+						<div class="wrap-input100">
+							<span class="label-input100">Valor del Crédito</span>
+							<div class="single-icon">
+								<div class="left-input">
+										<div class="fa-icon-center"><i class="fa fa-handshake-o"></i></div>
+								</div>
+								<div class="right-input">
+										<input class="input100 req-field numMask amount" type="text" name="amountUI" id="amountUI" placeholder="Valor del Crédito" disabled>
+										<span class="focus-input100"></span>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+
+				</form>
+
+				<!-- Results -->
+				<div id="results">
+					<div id="compulsory_results_tag" class="compulsory_results_class hiddenResults">
+						<!-- Main response container -->
+						<div class="wrap-input100 main-response">
+
+							<!-- Monthly Payment -->
+							<!-- <span class="label-input100"><i class="fa fa-money"></i> Cuota Mensual</span> -->
+							<span class="contact100-form-title">Cuota Mes</span>
+
+							<!--<span class="input100 numMask" id="monthlyPaymentUI">Cuota Mensual</span>-->
+							<input class="input100 req-field numMask" type="text" name="monthly_payment_tag" id="monthly_payment_tag" placeholder="Cuota Mensual" disabled>
+							<!-- <h1 class="" id="monthlyPayment">Cuota Mensual</h1> -->
+
+							<!-- Last (Residual) Payment -->
+							<div class="residualHide" id="residualResultTag">
+								<span class="contact100-form-title">Cuota Residual</span>
+								<input class="input100 req-field numMask" type="text" name="last_payment_tag" id="last_payment_tag" placeholder="Cuota Residual" disabled>
+								<!-- <span class="input100 req-field numMask" id="residualPaymentAndRateUI">Cuota Residual</span> -->
+							</div>
+
+							<!-- Coqueta Line -->
+							<span class="focus-input100"></span>
+						</div>
+
+						<!-- Expanded info button -->
+						<div class="container-contact100-form-btn">
+							<div class="wrap-contact100-form-btn">
+								<div class="contact100-form-bgbtn"></div>
+								<!-- <button class="contact100-form-btn hiddenResults" id="expandDetail"> -->
+								<button class="contact100-form-btn" id="expandDetail">
+									<span>
+										Info
+										<i class="fas fa-angle-down m-l-7" aria-hidden="true"></i>
+										<!--<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>-->
+									</span>
+								</button>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- Expanded Info, Not Compulsory Results (Total Payment and Interests) -->
+					<div id="not_compulsory_results_tag" class="hiddenResults">
+						<div class="calculator-amortization">
+							<div class="expanded-info">
+								<div class="wrap-input100">
+
+									<!-- Total Payment -->
+									<div class="left">
+										<span class="label-input100"><i class="fa fa-usd"></i> Pago Total</span>
+										<!-- <span class="input100" id="total_payment_tag"></span> -->
+										<input class="input100 numMask center-content" type="text" name="total_payment_tag" id="total_payment_tag" disabled>
+										<span class="focus-input100"></span>
+									</div>
+
+									<!-- Interests -->
+									<div class="right">
+										<span class="label-input100"><i class="fa fa-credit-card"></i> Total Intereses</span>
+										<!-- <span class="input100" id="total_interest_tag"></span> -->
+										<input class="input100 numMask center-content" type="text" name="total_interest_tag" id="total_interest_tag" disabled>
+										<span class="focus-input100"></span>
+									</div>
+								</div>
+
+								<!-- table -->
+								<div id="table_div" class="results"></div>
+
+							</div>
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="logo-footer">
+				<img class="logo-img" src="images/Jaguar.gif" alt="The New F-Pacer SVR">
+			</div>
+			</div>
+
+		</div>
+
+
+
+		<!-- <div id="dropDownSelect1"></div> -->
+
+
+		<!--===============================================================================================-->
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="js/ext/jquery.inputmask.bundle.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!--=====================================SERVER====================================================-->
+			<script>
+			    $(document).ready(function(){
+						$('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+			    });
+			</script>
+
+		<!--======================================UTIL=====================================================-->
+		<script src="js/fslacro_min_obf.js"></script>
+		<!--===============================================================================================-->
+
+		<!--======================================SERVICE WORKERS==========================================-->
+
+		<!--===============================================================================================-->
+		<!--<script src="index.js"></script>-->
+		<!--===============================================================================================-->
+
+</body>
+
+</html>
