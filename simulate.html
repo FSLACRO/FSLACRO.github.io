@@ -55,16 +55,16 @@
 					<!--<span class="contact100-form-title">Crédito</span>-->
 
 					<!-- Select Plan -->
-					<div class="">
-						<select id="plan_name_tag">
-              <!-- <option value="MEMBERSHIP">Membership</option> -->
-              <option value="ELITE">Elite</option>
-							<option value="EXCLUSIVE">Exclusive</option>
-							<!-- <option value="ELITE">Elite</option> -->
-							<option value="MEMBERSHIP">Membership</option>
-              <option value="GANCHO">Go Premium</option>
-							<option value="TAYLORMADE">Taylor-made</option>
-							<option value="PLATINUM">Platinum</option>
+					<div class="select_container">
+						<select class="plan_selector" id="plan_name_tag">
+              <!-- <option value="MEMBERSHIP">Plan Membership</option> -->
+              <option value="ELITE">Plan Elite</option>
+							<option value="EXCLUSIVE">Plan Exclusive</option>
+							<!-- <option value="ELITE">Plan Elite</option> -->
+							<option value="MEMBERSHIP">Plan Membership</option>
+              <option value="GANCHO">Plan Premium</option>
+							<option value="TAYLORMADE">Plan Taylor-made</option>
+							<option value="PLATINUM">Plan Platinum</option>
             </select>
 					</div>
 
@@ -75,7 +75,7 @@
 								<span class="label-input100">Precio del vehículo <span class="required-highlight">*</span></span>
 								<div class="single-icon">
 									<div class="left-input">
-										<div class="fa-icon-center"><i class="fas fa-money-bill-alt"></i></div>
+										<div class="fa-icon-center"><i class="fa fa-money-bill-alt"></i></div>
 										<!-- <div class="fa-icon-center"><i class="fa fa-usd"></i></div> -->
 									</div>
 									<div class="right-input">
@@ -87,12 +87,10 @@
 						</div>
 						<div class="rightPercent">
 							<div class="wrap-input100 validate-input" data-validate="Ingrese el interés">
-								<span class="label-input100">Tasa de Interés <span class="required-highlight">*</span></span>
+								<span class="label-input100">Interés <span class="required-highlight">*</span></span>
 								<div class="single-icon">
 									<div class="left-input">
-										<!-- <div class="fa-icon-center"><i class="fa fa-percent"></i></div> -->
 										<div class="fa-icon-center"><i class="fa fa-coins"></i></div>
-										<!-- <div class="fa-icon-center"><i class="fa fa-viacoin"></i></div> -->
 									</div>
 									<div class="right-input">
 										<!-- <input class="input100 req-field inputUICK" type="number" name="rate_tag" id="rate_tag" placeholder="Mensual">
@@ -133,7 +131,7 @@
 								<span class="label-input100">Período de Gracia</span>
 								<div class="single-icon">
 									<div class="left-input">
-										<div class="fa-icon-center"><i class="fas fa-handshake"></i></div>
+										<div class="fa-icon-center"><i class="far fa-calendar"></i></div>
 									</div>
 									<div class="right-input">
 										<input class="input100 req-field inputUICK" type="number" name="grace_tag" id="grace_tag" placeholder="Meses">
@@ -192,7 +190,7 @@
 										<div class="wrap-input100">
 											<div class="single-icon">
 												<div class="left-input">
-													<div class="fa-icon-center"><i class="fas fa-angle-double-down"></i></div>
+													<div class="fa-icon-center"><i class="fas fa-handshake"></i></div> <!-- fas fa-angle-double-down -->
 												</div>
 												<div class="right-input">
 													<input class="input100 numMask inputUICK" type="text" name="residual_payment_value_tag" id="residual_payment_value_tag" placeholder="$">
@@ -205,7 +203,7 @@
 										<div class="wrap-input100">
 											<div class="single-icon">
 												<div class="left-input">
-													<div class="fa-icon-center"><i class="fas fa-angle-double-down"></i></div>
+													<div class="fa-icon-center"><i class="fas fa-handshake"></i></div>
 												</div>
 												<div class="right-input">
 													<div>
@@ -255,25 +253,23 @@
 				<div id="results">
 					<div id="compulsory_results_tag" class="compulsory_results_class hiddenResults">
 						<!-- Main response container -->
-						<div class="wrap-input100 main-response">
+						<div class="wrap-input100">
 
-							<!-- Monthly Payment -->
-							<!-- <span class="label-input100"><i class="fa fa-money"></i> Cuota Mensual</span> -->
-							<span class="contact100-form-title">Cuota Mes</span>
-
-							<!--<span class="input100 numMask" id="monthlyPaymentUI">Cuota Mensual</span>-->
-							<input class="input100 req-field numMask" type="text" name="monthly_payment_tag" id="monthly_payment_tag" placeholder="Cuota Mensual" disabled>
-							<!-- <h1 class="" id="monthlyPayment">Cuota Mensual</h1> -->
-
-							<!-- Last (Residual) Payment -->
-							<div class="residualHide" id="residualResultTag">
-								<span class="contact100-form-title">Cuota Residual</span>
-								<input class="input100 req-field numMask" type="text" name="last_payment_tag" id="last_payment_tag" placeholder="Cuota Residual" disabled>
-								<!-- <span class="input100 req-field numMask" id="residualPaymentAndRateUI">Cuota Residual</span> -->
+							<!-- Total Payment -->
+							<div class="left center_title">
+								<span class="label-input100"><i class="fa fa-credit-card"></i> Cuota Mes</span>
+								<!-- <span class="input100" id="monthly_payment_tag"></span> -->
+								<input class="input100 numMask center-content" type="text" name="monthly_payment_tag" id="monthly_payment_tag" disabled>
+								<span class="focus-input100"></span>
 							</div>
 
-							<!-- Coqueta Line -->
-							<span class="focus-input100"></span>
+							<!-- Interests -->
+							<div class="right center_title">
+								<span class="label-input100"><i class="fas fa-handshake"></i> Cuota Residual</span>
+								<!-- <span class="input100" id="last_payment_tag"></span> -->
+								<input class="input100 numMask center-content" type="text" name="last_payment_tag" id="last_payment_tag" disabled>
+								<span class="focus-input100"></span>
+							</div>
 						</div>
 
 						<!-- Expanded info button -->
@@ -350,20 +346,16 @@
 		<script src="vendor/bootstrap/js/popper.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<!--=====================================SERVER====================================================-->
-			<script>
-			    $(document).ready(function(){
-						$('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
-			    });
-			</script>
+		<script>
+			$(document).ready(function(){
+					$('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+			});
+		</script>
 
-		<!--======================================UTIL=====================================================-->
-		<!--===============================================================================================-->
-			<script src="js/util/input_mask_start.js"></script>
-		<!--===============================================================================================-->
-		
 		<!--======================================FINANCE==================================================-->
+
 		<!--===============================================================================================-->
-			<script src="js/fslacro_min_obf.js"></script>
+		<script src="js/fslacro_min_obf.js"></script>
 		<!--===============================================================================================-->
 		
 		<!--======================================SERVICE WORKERS==========================================-->
