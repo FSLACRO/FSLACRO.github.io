@@ -1,0 +1,81 @@
+/*
+COMPARATOR STYLES
+*/
+
+/*//////////////////////////////////////////////////////////////////
+[ STRUCTURE ]*/
+.price-div {}
+.plan-selector-div {}
+.predefined-div {}
+.predefined-results-div {}
+.benefits-div {}
+.options-div {}
+
+  .left-input {
+      width: 40px;
+      float: left;
+      height: 100%;
+      /* border-right: 2px solid #d9d9d9; */
+      white-space: nowrap;
+      text-overflow:ellipsis;
+      overflow: hidden;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      /* bottom: 0px; */
+  }
+  .right-input {
+      margin-left: 40px;
+      /* height: 100%; */
+      /* border: solid red; */
+      height: 32px;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+      overflow: hidden;
+  }
+  .item-container{
+
+  }
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ STYLE ]*/
+
+/* Redefine left style from main: remove border. */
+.left{
+  border-right: none;
+}
+.item-div{
+  /* margin-top: 10px; */
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+
+.item-label-div{
+  text-align: left;
+}
+
+.predefined-div .center-content{
+  text-align: center;
+}
+.item-value-div > .left, .item-value-div > .right {
+  border-bottom: 2px solid #d9d9d9;
+  border-bottom-left-radius: 10px;
+}
+
+.comparator-main-div .contact100-form-title{
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
+.value-measure-class{
+  width: min-content;
+  background: transparent
+  ;
+}
+.adjusted-input .input100-basics{
+  
+}
+.measure-class{
+  width: -webkit-fill-available;
+  background:  transparent;
+}

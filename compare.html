@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Land Rover - Jaguar | Loan</title>
+	<title>Plan Comparator | Land Rover - Jaguar</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,7 +37,11 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
+
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<link rel="stylesheet" type="text/css" href="css/comparator.css">
 	<!--===============================================================================================-->
 </head>
 
@@ -50,280 +54,335 @@
 				<img class="logo-img" src="images/logo-uk-borh.png" alt="Logo">
 				<a href="index.html"><div class="logo-type">Financial Services</div></a>
 			</div>
-			<div class="padder">
-				<form class="contact100-form validate-form" id="main_form">
-					<!--<span class="contact100-form-title">Crédito</span>-->
+			<div class="padder comparator-main-div">
 
-					<!-- Select Plan -->
-					<div class="">
-						<select id="plan_name_tag">
-              <option value="MEMBERSHIP">Membership</option>
-              <option value="EXCLUSIVE">Exclusive</option>
-              <option value="ELITE">Elite</option>
-              <option value="GANCHO">Go Premium</option>
-							<option value="TAYLORMADE">Taylor-made</option>
-							<option value="PLATINUM">Platinum</option>
-            </select>
-					</div>
+				<!-- Main Title -->
+				<span class="contact100-form-title">Compare Planes</span>
 
-					<!-- Price and Rate-->
-					<div class="">
-						<div class="leftPercent">
-							<div class="wrap-input100">
-								<span class="label-input100">Precio del vehículo <span class="required-highlight">*</span></span>
-								<div class="single-icon">
-									<div class="left-input">
-										<div class="fa-icon-center"><i class="fas fa-money-bill-alt"></i></div>
-										<!-- <div class="fa-icon-center"><i class="fa fa-usd"></i></div> -->
-									</div>
-									<div class="right-input">
-										<input class="input100 numMask inputUICK amountVarClass" type="text" name="price_tag" id="price_tag" placeholder="Precio" pattern="[0-9]*">
-										<span class="focus-input100"></span>
-									</div>
-								</div>
+				<!-- price -->
+				<!-- <div class="price-div center-content">
+					<div class="wrap-input100">
+						<span class="label-input100 label-input100-basics">Precio del vehículo <span class="required-highlight">*</span></span>
+						<div class="single-icon center-content">
+							<div class="left-input">
+								<div class="fa-icon-center"><i class="fas fa-car"></i></div>
 							</div>
-						</div>
-						<div class="rightPercent">
-							<div class="wrap-input100 validate-input" data-validate="Ingrese el interés">
-								<span class="label-input100">Tasa de Interés <span class="required-highlight">*</span></span>
-								<div class="single-icon">
-									<div class="left-input">
-										<!-- <div class="fa-icon-center"><i class="fa fa-percent"></i></div> -->
-										<div class="fa-icon-center"><i class="fa fa-coins"></i></div>
-										<!-- <div class="fa-icon-center"><i class="fa fa-viacoin"></i></div> -->
-									</div>
-									<div class="right-input">
-										<!-- <input class="input100 req-field inputUICK" type="number" name="rate_tag" id="rate_tag" placeholder="Mensual">
-										<span class="focus-input100"></span> -->
-										<div>
-											<div class="pertcentNum">
-												<input class="input100" type="text" name="rate_tag" id="rate_tag" placeholder="">
-											</div>
-											<div class="percentSymbol">
-												<input class="input100 percentSymbolInput" type="text" placeholder="%" disabled>
-											</div>
-										</div>
-										<span class="focus-input100"></span>
-									</div>
-								</div>
+							<div class="right-input">
+								<input class="input100 input100-basics numMask" type="text" name="price_tag" id="price_tag" placeholder="Precio" pattern="[0-9]*">
+								<span class="focus-input100"></span>
 							</div>
 						</div>
 					</div>
+				</div> -->
 
-					<!-- Term and Grace -->
-					<div class="">
-						<div class="leftPercent">
-							<div class="wrap-input100">
-								<span class="label-input100">Plazo en Meses <span class="required-highlight">*</span></span>
-								<div class="single-icon">
-									<div class="left-input">
-										<div class="fa-icon-center"><i class="fas fa-calendar-alt"></i></div>
-									</div>
-									<div class="right-input">
-										<input class="input100 req-field inputUICK" type="number" name="months_tag" id="months_tag" placeholder="Meses">
-										<span class="focus-input100"></span>
-									</div>
+				<!-- price -->
+				<div class="wrap-input100">
+					<!-- Price Title -->
+					<!-- <span class="contact100-form-title">Seleccione el Precio</span> -->
+
+					<div class="item-label-div">
+						<span><i class="fas fa-car"></i></span><span class="label-input100 label-input100-basics">Precio del Vehículo <span class="required-highlight">*</span></span>
+					</div>
+					<div class="item-value-div">
+						<input class="input100 input100-basics numMask" type="text" name="price_tag" id="price_tag" placeholder="$">
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<!-- plan selector -->
+				<div class="plan-selector-div center-content">
+
+					<!-- Plan Selector Title -->
+					<span class="contact100-form-title">Seleccione Plan</span>
+
+					<div class="left">
+						<span id="plan1_tag">Plan 1</span>
+					</div>
+					<div class="right">
+						<span id="plan2_tag">Plan 2</span>
+					</div>
+				</div>
+
+				<!-- predefined atributes -->
+				<div class="predefined-div">
+
+					<!-- Predefinidos Title -->
+					<!-- <span class="contact100-form-title">Valores Predefinidos</span> -->
+
+					<!-- Rate -->
+					<div class="item-div">
+						<!-- label -->
+						<div class="item-label-div">
+							<span><i class="fa fa-coins"></i></span><span class="label-input100 label-input100-basics">Interés <span class="required-highlight">*</span></span>
+						</div>
+						<!-- Values -->
+						<div class="item-value-div">
+							<!-- p1 -->
+							<div class="left">
+								<!-- Rate P1 -->
+								<!-- <input class="input100 input100-basics" type="text" name="rate_p1_tag" id="rate_p1_tag" placeholder="%"> -->
+								<div class="adjusted-input">
+									<span class="value-measure-class"><input class="input100-basics independent-field_p1" type="text" name="rate_p1_tag" id="rate_p1_tag" placeholder="%"></span><!--<span class="measure-class">%</span>-->
 								</div>
 							</div>
-						</div>
-						<div class="rightPercent">
-							<div class="wrap-input100 validate-input" data-validate="Ingrese el interés">
-								<span class="label-input100">Período de Gracia</span>
-								<div class="single-icon">
-									<div class="left-input">
-										<div class="fa-icon-center"><i class="fas fa-handshake"></i></div>
-									</div>
-									<div class="right-input">
-										<input class="input100 req-field inputUICK" type="number" name="grace_tag" id="grace_tag" placeholder="Meses">
-										<span class="focus-input100"></span>
-									</div>
-								</div>
+							<!-- p2 -->
+							<div class="right">
+								<!-- Rate P2 -->
+								<input class="input100 input100-basics independent-field_p2" type="text" name="rate_p2_tag" id="rate_p2_tag" placeholder="%">
 							</div>
 						</div>
 					</div>
 
-					<!-- initial Payment -->
-					<div>
-						<span class="label-input100">Cuota Inicial</span>
-						<div>
-							<div class="leftPercent">
-								<div class="wrap-input100">
-									<div class="single-icon">
-										<div class="left-input">
-											<div class="fa-icon-center"><i class="fas fa-sort-amount-down"></i></div>
-										</div>
-										<div class="right-input">
-											<input class="input100 numMask inputUICK amountVarClass" type="text" name="down_payment_value_tag" id="down_payment_value_tag" placeholder="$">
-											<span class="focus-input100"></span>
-										</div>
-									</div>
-								</div>
+					<!-- Term -->
+					<div class="item-div">
+						<!-- label -->
+						<div class="item-label-div">
+							<span><i class="fas fa-calendar-alt"></i></span><span class="label-input100 label-input100-basics">Plazo <span class="required-highlight">*</span></span>
+						</div>
+						<!-- Values -->
+						<div class="item-value-div">
+
+							<!-- p1 -->
+							<div class="left">
+								<!-- Term P1 -->
+								<input class="input100 input100-basics independent-field_p1" type="text" name="term_p1_tag" id="term_p1_tag" placeholder="meses" pattern="[0-9]*">
 							</div>
-							<div class="rightPercent">
-								<div class="wrap-input100">
-									<div class="single-icon">
-										<div class="left-input">
-											<div class="fa-icon-center"><i class="fas fa-sort-amount-down"></i></div>
-										</div>
-										<div class="right-input">
-											<div>
-												<div class="pertcentNum">
-													<input class="input100" type="text" name="down_payment_tag" id="down_payment_tag" placeholder="">
-												</div>
-													<div class="percentSymbol">
-														<input class="input100 percentSymbolInput" type="text" placeholder="%" disabled>
-												</div>
-													</div>
-													<span class="focus-input100"></span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+							<!-- p2 -->
+							<div class="right">
+								<!-- Term P2 -->
+								<input class="input100 input100-basics independent-field_p2" type="text" name="term_p2_tag" id="term_p2_tag" placeholder="meses" pattern="[0-9]*">
 							</div>
+						</div>
+					</div>
 
-							<!-- Final Payment -->
-							<div>
-								<span class="label-input100">Cuota Residual</span>
-								<div>
-									<div class="leftPercent">
-										<div class="wrap-input100">
-											<div class="single-icon">
-												<div class="left-input">
-													<div class="fa-icon-center"><i class="fas fa-angle-double-down"></i></div>
-												</div>
-												<div class="right-input">
-													<input class="input100 numMask inputUICK" type="text" name="residual_payment_value_tag" id="residual_payment_value_tag" placeholder="$">
-													<span class="focus-input100"></span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="rightPercent">
-										<div class="wrap-input100">
-											<div class="single-icon">
-												<div class="left-input">
-													<div class="fa-icon-center"><i class="fas fa-angle-double-down"></i></div>
-												</div>
-												<div class="right-input">
-													<div>
-														<div class="pertcentNum">
-															<input class="input100" type="text" name="residual_payment_tag" id="residual_payment_tag" placeholder="">
-														</div>
-															<div class="percentSymbol">
-																<input class="input100 percentSymbolInput" type="text" placeholder="%" disabled>
-															</div>
-															</div>
-															<span class="focus-input100"></span>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+					<!-- Grace -->
+					<div class="item-div">
+						<!-- label -->
+						<div class="item-label-div">
+							<span><i class="far fa-calendar"></i></span><span class="label-input100 label-input100-basics">Período de Gracia</span>
+						</div>
+						<!-- Values -->
+						<div class="item-value-div">
 
-									<!-- Timeline -->
-									<div>
-										<span class="contact100-form-title">Línea de Tiempo</span>
-										<div class="timeline_div" >
-											<img class="timeline_div_img" id="timeline_div" src="" alt="Plan Image">
-										</div>
-									</div>
+							<!-- p1 -->
+							<div class="left">
+								<!-- Grace P1 -->
+								<input class="input100 input100-basics independent-field_p1" type="text" name="grace_p1_tag" id="grace_p1_tag" placeholder="meses" pattern="[0-9]*">
+							</div>
+							<!-- p2 -->
+							<div class="right">
+								<!-- Grace P2 -->
+								<input class="input100 input100-basics independent-field_p2" type="text" name="grace_p2_tag" id="grace_p2_tag" placeholder="meses" pattern="[0-9]*">
+							</div>
+						</div>
+					</div>
 
-									<!-- Amount -->
-									<!-- <div>
-						<div class="wrap-input100">
-							<span class="label-input100">Valor del Crédito</span>
-							<div class="single-icon">
-								<div class="left-input">
-										<div class="fa-icon-center"><i class="fa fa-handshake-o"></i></div>
+					<!-- Down Payment -->
+					<div class="item-div">
+						<!-- label -->
+						<div class="item-label-div">
+							<span><i class="fas fa-sort-amount-down"></i></span><span class="label-input100 label-input100-basics">Cuota Inicial</span>
+						</div>
+						<!-- Values -->
+						<div class="item-value-div">
+							<!-- p1 -->
+							<div class="left">
+								<!-- Down Payment P1 -->
+								<input class="input100 input100-basics" type="text" name="down_payment_p1_tag" id="down_payment_p1_tag" placeholder="$" pattern="[0-9]*">
+							</div>
+							<!-- p2 -->
+							<div class="right">
+								<!-- Down Payment P2 -->
+								<input class="input100 input100-basics" type="text" name="down_payment_p2_tag" id="down_payment_p2_tag" placeholder="$" pattern="[0-9]*">
+							</div>
+						</div>
+					</div>
+
+					<!-- Final Payment -->
+					<div class="item-div">
+						<!-- label -->
+						<div class="item-label-div">
+							<span><i class="fas fa-handshake"></i></span><span class="label-input100 label-input100-basics">Valor Residual</span>
+						</div>
+						<!-- Values -->
+						<div class="item-value-div">
+							<!-- p1 -->
+							<div class="left">
+								<!-- Down Payment P1 -->
+								<input class="input100 input100-basics" type="text" name="residual_payment_p1_tag" id="residual_payment_p1_tag" placeholder="$" pattern="[0-9]*">
+							</div>
+							<!-- p2 -->
+							<div class="right">
+								<!-- Down Payment P2 -->
+								<input class="input100 input100-basics" type="text" name="residual_payment_p2_tag" id="residual_payment_p2_tag" placeholder="$" pattern="[0-9]*">
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="compulsory_results_tag">
+
+					<div class="predefined-results-div">
+						<!-- Resultados Title -->
+						<span class="contact100-form-title">Resultados</span>
+
+						<!-- Monthly Payment -->
+						<div class="item-div">
+							<!-- label -->
+							<div class="item-label-div">
+								<span><i class="fa fa-credit-card"></i></span><span class="label-input100 label-input100-basics">Cuota Mensual</span>
+							</div>
+							<!-- Values -->
+							<div class="item-value-div">
+								<!-- p1 -->
+								<div class="left">
+									<!-- Monthly Payment P1 -->
+									<input class="input100 input100-basics numMask" type="text" name="monthly_payment_p1_tag" id="monthly_payment_p1_tag" placeholder="$" pattern="[0-9]*" disabled>
 								</div>
-								<div class="right-input">
-										<input class="input100 req-field numMask amount" type="text" name="amountUI" id="amountUI" placeholder="Valor del Crédito" disabled>
-										<span class="focus-input100"></span>
+								<!-- p2 -->
+								<div class="right">
+									<!-- Monthly Payment P2 -->
+									<input class="input100 input100-basics numMask" type="text" name="monthly_payment_p2_tag" id="monthly_payment_p2_tag" placeholder="$" pattern="[0-9]*" disabled>
 								</div>
 							</div>
 						</div>
+
+						<!-- Acumulated Payment -->
+						<div class="item-div">
+							<!-- label -->
+							<div class="item-label-div">
+								<i class="fas fa-plus"></i><span class="label-input100 label-input100-basics">Acumulado Mes </span><span id="small_plan_end_tag"></span>
+							</div>
+							<!-- Values -->
+							<div class="item-value-div">
+								<!-- p1 -->
+								<div class="left">
+									<!-- Accumulated Payment P1 -->
+									<input class="input100 input100-basics numMask" type="text" name="acumulated_payment_p1_tag" id="acumulated_payment_p1_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+								<!-- p2 -->
+								<div class="right">
+									<!-- Accumulated Payment P2 -->
+									<input class="input100 input100-basics numMask" type="text" name="acumulated_payment_p2_tag" id="acumulated_payment_p2_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+							</div>
+						</div>
+
+						<!-- Down Payment Value -->
+						<div class="item-div">
+							<!-- label -->
+							<div class="item-label-div">
+								<span><i class="fas fa-sort-amount-down"></i></span><span class="label-input100 label-input100-basics">Cuota Inicial</span>
+							</div>
+							<!-- Values -->
+							<div class="item-value-div">
+								<!-- p1 -->
+								<div class="left">
+									<!-- Accumulated Payment P1 -->
+									<input class="input100 input100-basics numMask" type="text" name="down_payment_value_p1_tag" id="down_payment_value_p1_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+								<!-- p2 -->
+								<div class="right">
+									<!-- Accumulated Payment P2 -->
+									<input class="input100 input100-basics numMask" type="text" name="down_payment_value_p2_tag" id="down_payment_value_p2_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+							</div>
+						</div>
+
+						<!-- Residual Payment Value -->
+						<div class="item-div">
+							<!-- label -->
+							<div class="item-label-div">
+								<span><i class="fas fa-handshake"></i></span><span class="label-input100 label-input100-basics">Valor Residual</span>
+							</div>
+							<!-- Values -->
+							<div class="item-value-div">
+								<!-- p1 -->
+								<div class="left">
+									<!-- Accumulated Payment P1 -->
+									<input class="input100 input100-basics numMask" type="text" name="residual_payment_value_p1_tag" id="residual_payment_value_p1_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+								<!-- p2 -->
+								<div class="right">
+									<!-- Accumulated Payment P2 -->
+									<input class="input100 input100-basics numMask" type="text" name="residual_payment_value_p2_tag" id="residual_payment_value_p2_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+							</div>
+						</div>
+
+						<!-- Remaining Payment -->
+						<div class="item-div">
+							<!-- label -->
+							<div class="item-label-div">
+								<span><i class="fas fa-handshake"></i></span><span class="label-input100 label-input100-basics">Pago Pendiente</span>
+							</div>
+							<!-- Values -->
+							<div class="item-value-div">
+								<!-- p1 -->
+								<div class="left">
+									<!-- Accumulated Payment P1 -->
+									<input class="input100 input100-basics numMask" type="text" name="remaining_p1_tag" id="remaining_p1_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+								<!-- p2 -->
+								<div class="right">
+									<!-- Accumulated Payment P2 -->
+									<input class="input100 input100-basics numMask" type="text" name="remaining_p2_tag" id="remaining_p2_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+							</div>
+						</div>
+
+						<!-- Total Payment -->
+						<div class="item-div">
+							<!-- label -->
+							<div class="item-label-div">
+								<span><i class="fa fa-money-bill-alt"></i></span><span class="label-input100 label-input100-basics">Pago Total</span>
+							</div>
+							<!-- Values -->
+							<div class="item-value-div">
+								<!-- p1 -->
+								<div class="left">
+									<!-- Accumulated Payment P1 -->
+									<input class="input100 input100-basics numMask" type="text" name="total_payment_p1_tag" id="total_payment_p1_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+								<!-- p2 -->
+								<div class="right">
+									<!-- Accumulated Payment P2 -->
+									<input class="input100 input100-basics numMask" type="text" name="total_payment_p2_tag" id="total_payment_p2_tag" placeholder="$" pattern="[0-9]*" disabled>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<!-- Benefits -->
+					<!-- <hr>
+					<div class="benefits-div">
+
 					</div> -->
 
+					<!-- Options -->
+					<div class="options-div">
 
-				</form>
+						<!-- Options Title -->
+						<span class="contact100-form-title">Opciones</span>
 
-				<!-- Results -->
-				<div id="results">
-					<div id="compulsory_results_tag" class="compulsory_results_class hiddenResults">
-						<!-- Main response container -->
-						<div class="wrap-input100 main-response">
-
-							<!-- Monthly Payment -->
-							<!-- <span class="label-input100"><i class="fa fa-money"></i> Cuota Mensual</span> -->
-							<span class="contact100-form-title">Cuota Mes</span>
-
-							<!--<span class="input100 numMask" id="monthlyPaymentUI">Cuota Mensual</span>-->
-							<input class="input100 req-field numMask" type="text" name="monthly_payment_tag" id="monthly_payment_tag" placeholder="Cuota Mensual" disabled>
-							<!-- <h1 class="" id="monthlyPayment">Cuota Mensual</h1> -->
-
-							<!-- Last (Residual) Payment -->
-							<div class="residualHide" id="residualResultTag">
-								<span class="contact100-form-title">Cuota Residual</span>
-								<input class="input100 req-field numMask" type="text" name="last_payment_tag" id="last_payment_tag" placeholder="Cuota Residual" disabled>
-								<!-- <span class="input100 req-field numMask" id="residualPaymentAndRateUI">Cuota Residual</span> -->
-							</div>
-
-							<!-- Coqueta Line -->
-							<span class="focus-input100"></span>
+						<!-- Options P1 -->
+						<div class="left" id="plan1_opts_tag">
+							<p>P1 Opt1</p>
+							<p>P1 Opt2</p>
+							<p>P1 Opt3</p>
 						</div>
 
-						<!-- Expanded info button -->
-						<div class="container-contact100-form-btn">
-							<div class="wrap-contact100-form-btn">
-								<div class="contact100-form-bgbtn"></div>
-								<!-- <button class="contact100-form-btn hiddenResults" id="expandDetail"> -->
-								<button class="contact100-form-btn" id="expandDetail">
-									<span>
-										Info
-										<i class="fas fa-angle-down m-l-7" aria-hidden="true"></i>
-										<!--<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>-->
-									</span>
-								</button>
-							</div>
+						<!-- Options P2 -->
+						<div class="right" id="plan2_opts_tag">
+							<p>P2 Opt1</p>
+							<p>P1 Opt2</p>
 						</div>
 
 					</div>
-
-					<!-- Expanded Info, Not Compulsory Results (Total Payment and Interests) -->
-					<div id="not_compulsory_results_tag" class="hiddenResults">
-						<div class="calculator-amortization">
-							<div class="expanded-info">
-								<div class="wrap-input100">
-
-									<!-- Total Payment -->
-									<div class="left">
-										<span class="label-input100"><i class="fa fa-usd"></i> Pago Total</span>
-										<!-- <span class="input100" id="total_payment_tag"></span> -->
-										<input class="input100 numMask center-content" type="text" name="total_payment_tag" id="total_payment_tag" disabled>
-										<span class="focus-input100"></span>
-									</div>
-
-									<!-- Interests -->
-									<div class="right">
-										<span class="label-input100"><i class="fa fa-credit-card"></i> Total Intereses</span>
-										<!-- <span class="input100" id="total_interest_tag"></span> -->
-										<input class="input100 numMask center-content" type="text" name="total_interest_tag" id="total_interest_tag" disabled>
-										<span class="focus-input100"></span>
-									</div>
-								</div>
-
-								<!-- table -->
-								<div id="table_div" class="results"></div>
-
-							</div>
-						</div>
-
-
-
-					</div>
-
 				</div>
 
 
@@ -337,31 +396,26 @@
 
 
 
-		<!-- <div id="dropDownSelect1"></div> -->
-
-
-		<!--===============================================================================================-->
+		<!--=====================================EXT=======================================================-->
 		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-		<!--===============================================================================================-->
-		<script src="js/ext/jquery.inputmask.bundle.min.js"></script>
 		<!--===============================================================================================-->
 		<script src="vendor/bootstrap/js/popper.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-		<!--=====================================SERVER====================================================-->
-			<script>
-			    $(document).ready(function(){
-						$('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
-			    });
-			</script>
-
-		<!--======================================UTIL=====================================================-->
-		<script src="js/fslacro_min_obf.js"></script>
 		<!--===============================================================================================-->
-
+		<script src="js/ext/jquery.inputmask.bundle.min.js"></script>
+		
+		<!--======================================FINANCE==================================================-->
+		<script src="js/fslacro_comp_min_obf.js"></script>
+		
 		<!--======================================SERVICE WORKERS==========================================-->
-
-		<!--===============================================================================================-->
-		<!--<script src="index.js"></script>-->
+		<script src="index.js"></script>
+		
+		<!--======================================WWW000 HOST===============================================-->
+		<script>
+			$(document).ready(function(){
+					$('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+			});
+		</script>
 		<!--===============================================================================================-->
 
 </body>

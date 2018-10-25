@@ -13,6 +13,7 @@ self.addEventListener('install', function(event) {
         main_path_ws + 'compare.html',
         // JS
         main_path_ws + 'js/fslacro_min_obf.js',
+		main_path_ws + 'js/fslacro_comp_min_obf.js',
         // JS Ext
         main_path_ws + 'js/ext/jquery.inputmask.bundle.min.js',
         main_path_ws + 'js/ext/jquery-3.3.1.min.js',
