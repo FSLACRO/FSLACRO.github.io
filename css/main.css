@@ -25,6 +25,7 @@ GLOBAL CUSTOM STYLES
     white-space: nowrap;
     text-overflow:ellipsis;
     overflow: hidden;
+    padding-right: 0em;
 }
 .right {
     margin-left: 50%;
@@ -47,12 +48,11 @@ GLOBAL CUSTOM STYLES
 }
 
 .label-input100 {
-  font-family: Poppins-Regular;
+  font-family: Poppins-Regular, sans-serif;
   font-size: 13px;
   color: #666666;
   line-height: 1;
   padding-left: 5px;
-  bottom: 0;
   bottom: 0px;
   /* position: absolute; */
 }
@@ -61,7 +61,7 @@ GLOBAL CUSTOM STYLES
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Poppins-Medium;
+  font-family: Poppins-Medium, sans-serif;
   font-size: 18px;
   color: #666666; /*#4a4f54;*/ /*#333333;*/
   line-height: 1.2;
@@ -70,7 +70,7 @@ GLOBAL CUSTOM STYLES
   /* position: absolute; */
   /* text-align: right; */
   -webkit-text-fill-color: #666666 !important;
-	-webkit-opacity:1;
+  -webkit-opacity:1;
 }
 
 .focus-input100 {
@@ -102,7 +102,6 @@ GLOBAL CUSTOM STYLES
   background: #7f7f7f;
 }
 
-
 /*---------------------------------------------*/
 input.input100 {
   height: 32px;
@@ -123,7 +122,6 @@ textarea.input100 {
 .has-val.input100 + .focus-input100::before {
   width: 100%;
 }
-
 
 /*------------------------------------------------------------------
 [ Button ]*/
@@ -204,13 +202,12 @@ textarea.input100 {
 
 /*//////////////////////////////////////////////////////////////////
 [ ICONS ]*/
-
 .svg-inline--fa {
   color: #00512c;
 	vertical-align: middle;
 }
 
-// To Remove
+/* To Remove */
 .fa, .fas{
 	color: #00512c;
 	vertical-align: middle;
@@ -226,12 +223,13 @@ textarea.input100 {
     vertical-align: middle;
     font-size: 18px;
 }
-#fa_coins{
+.fa_coins{
 		color: #00512c;
 }
 .fa-long-arrow-right{
 	color:white;
 }
+
 
 /*//////////////////////////////////////////////////////////////////
 [ TABLE ]*/
@@ -250,7 +248,7 @@ thead, tfoot{
 	color: #f9fbf9;
 }
 
-thead{
+thead {
 	background-color: rgba(0, 42, 23, 1);
 	line-height: 40px;
 	border-radius: 20px;
@@ -295,7 +293,7 @@ table {
 }
 .plan_selector{
 	width: 100%;
-	background-color: #0c121c;
+	background-color: #00512c; /*#0c121c;*/
 	border-radius: 4px;
 	/* font-family: Poppins-Medium; */
 	font-family: Poppins-Regular;
@@ -304,6 +302,7 @@ table {
 	/* line-height: 1.2; */
 	/* font-weight: 400; */
 	text-align: -webkit-center;
+  line-height: 1.2;
 }
 select {
   text-align: center;
@@ -364,13 +363,8 @@ input:disabled {
 /*//////////////////////////////////////////////////////////////////
 [ OTHER ]*/
 
-
-.highlightDisabled{}
-
-
-
-	/*//////////////////////////////////////////////////////////////////
-	[ ICONS ]*/
+/*//////////////////////////////////////////////////////////////////
+[ ICONS ]*/
 	.fa-icon-center{
 	    display:inline-block;
 	    font-size: 18px;
@@ -411,14 +405,14 @@ input:disabled {
 
   /* Label */
   .label-input100-basics {
-  	font-size: 13px;
+  	font-size: 0.72em;
   	color: #666666;
   	font-family: Poppins-Regular;
   }
 
   /* Value */
   .input100-basics {
-  	font-size: 18px;
+  	font-size: 0.80em;
   	color: #666666;
   	font-family: Poppins-Medium;
   	height: 32px;

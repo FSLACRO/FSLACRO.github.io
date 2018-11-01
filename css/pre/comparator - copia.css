@@ -1,0 +1,78 @@
+/*
+COMPARATOR STYLES
+*/
+
+/*//////////////////////////////////////////////////////////////////
+[ STRUCTURE ]*/
+
+.main-response {
+	/*background-color: #00512c;*/
+    background-color: #f9fbf9;
+	border-radius: 20px;
+	border: 2px solid #d9d9d9;
+	/* margin-top: 25px; */
+
+}
+.main-response .input100{
+	text-align:center;
+}
+.main-response .contact100-form-title{
+	padding-top: 20px;
+}
+
+.traditional-div{
+
+}
+.elite-div{
+
+}
+
+/*Table*/
+.valueCell{
+  text-align: right;
+  font-size: 18px;
+  font-weight:  400;
+}
+tr .moneySymbolTable{/* width: 12px; */max-width: 0.7em;padding: 0px;margin: 0;border: 0;/* background-color: red; */}
+#EliteTradTable tbody tr:nth-child(odd){
+  background-color: #f9fbf9;
+}
+#EliteTradTable {
+    line-height: 2;
+}
+tr .badValue,  .badValue tr{
+	color: #969696;
+	/* font-size: 13px !important; */
+}
+
+thead .badValueHeader, tfoot .badValueHeader{
+	color: #969696;
+	/* font-size: 13px; */
+}
+table .compareLabel{
+	max-width: 5.1rem;
+	width: 27%;
+	/* padding-right: 2px; */
+}
+.beneficiosDiv{
+	/*
+	border: 1px solid #d9d9d9;
+	border-radius: 12px;
+	padding: 4px;
+	*/
+}
+.amountMainDiv{
+	visibility: hidden;
+	display: none;
+}
+
+.priceLeft{
+	border-color: red;
+	width: 60%;
+    float: left;
+}
+.termRight{
+	margin-left: 60%;
+    height: 100%;
+
+}
