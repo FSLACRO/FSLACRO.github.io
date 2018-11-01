@@ -23,8 +23,11 @@ self.addEventListener('install', function(event) {
         main_path_ws + 'vendor/bootstrap/js/bootstrap.min.js',
         main_path_ws + 'vendor/bootstrap/js/popper.js',
         // CSS
-        main_path_ws + 'css/main.css',
-        main_path_ws + 'css/util.css',
+			//main_path_ws + 'css/main.css',
+			//main_path_ws + 'css/util.css',
+		main_path_ws + 'css/common_full.min.css',
+		main_path_ws + 'css/comparator_full.min.css',
+		main_path_ws + 'css/simulator_full.min.css',
         // CSS Bootstrap
         main_path_ws + 'vendor/bootstrap/css/bootstrap.min.css',
         // IMAGES LOGO FOOTER
