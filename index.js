@@ -1,5 +1,5 @@
 // register service worker
-var main_path_app = '/fslacro/';
+var main_path_app = '/fslacro.github.io/';
 var service_worker_name = 'fslacrosw.js';
 var service_worker_path = main_path_app + service_worker_name;
 

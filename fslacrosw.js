@@ -1,4 +1,4 @@
-var main_path_ws = '/fslacro/';
+var main_path_ws = '/fslacro.github.io/';
 var cache_name_ws = 'jslc00';
 var default_img_ws = 'images/timelines/00.03.Elite.png'
 
