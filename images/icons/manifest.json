@@ -1,6 +1,6 @@
 {
-  "name": "FSLACRO Simulator",
-  "short_name": "FSLACRO Simu",
+  "name": "FSLACRO",
+  "short_name": "FSLACRO",
   "display": "standalone",
   "background_color": "#00773c",
   "theme_color": "#00773c",
