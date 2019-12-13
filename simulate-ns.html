@@ -2,42 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Loan Simulator | Land Rover - Jaguar</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta property="og:image" content="images/logo-Both.jpg">
-	<meta property="og:image:type" content="image/png">
-	<meta property="og:image:width" content="1024">
-	<meta property="og:image:height" content="1024">
-	<!--===============================================================================================-->
-	<!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico"/> -->
-
-	<link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-	<link rel="manifest" href="manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script> -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous"
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/simulator_full.min.css">
-	<!--===============================================================================================-->
 </head>
 
 <body>
@@ -56,8 +21,15 @@
 					<!-- Select Plan -->
 					<div class="select_container">
 						<select class="plan_selector" id="plan_name_tag">
-
-						</select>
+              <!-- <option value="MEMBERSHIP">Plan Membership</option> -->
+              <option value="ELITE">Plan Elite</option>
+							<option value="EXCLUSIVE">Plan Exclusive</option>
+							<!-- <option value="ELITE">Plan Elite</option> -->
+							<option value="MEMBERSHIP">Plan Membership</option>
+              <option value="GANCHO">Plan Premium</option>
+							<option value="TAYLORMADE">Plan Taylor-made</option>
+							<option value="PLATINUM">Plan Platinum</option>
+            </select>
 					</div>
 
 					<!-- Price and Rate-->
@@ -71,7 +43,7 @@
 										<div class="fa-icon-center"><i class="fas fa-car"></i></div>
 									</div>
 									<div class="right-input">
-										<input class="input100 input100-basics numMask" type="text" name="price_tag" id="price_tag" placeholder="Precio" pattern="[0-9]*">
+										<input class="input100 input100-basics " type="text" name="price_tag" id="price_tag" placeholder="Precio" pattern="[0-9]*">
 										<span class="focus-input100"></span>
 									</div>
 								</div>
@@ -89,8 +61,7 @@
 										<span class="focus-input100"></span> -->
 										<div>
 											<div class="pertcentNum">
-												<!-- <input class="input100 input100-basics independent-field" type="text" name="rate_tag" id="rate_tag" placeholder=""> -->
-												<input class="input100 input100-basics independent-field_dec" type="text" name="rate_tag" id="rate_tag" placeholder="">
+												<input class="input100 input100-basics independent-field" type="text" name="rate_tag" id="rate_tag" placeholder="">
 											</div>
 											<div class="percentSymbol">
 												<input class="input100 input100-basics percentSymbolInput" type="text" placeholder="%" disabled>
@@ -146,7 +117,7 @@
 											<div class="fa-icon-center"><i class="fas fa-sort-amount-down"></i></div>
 										</div>
 										<div class="right-input">
-											<input class="input100 input100-basics numMask" type="text" name="down_payment_value_tag" id="down_payment_value_tag" placeholder="$" pattern="[0-9]*">
+											<input class="input100 input100-basics " type="text" name="down_payment_value_tag" id="down_payment_value_tag" placeholder="$" pattern="[0-9]*">
 											<span class="focus-input100"></span>
 										</div>
 									</div>
@@ -186,7 +157,7 @@
 													<div class="fa-icon-center"><i class="fas fa-handshake"></i></div> <!-- fas fa-angle-double-down -->
 												</div>
 												<div class="right-input">
-													<input class="input100 input100-basics numMask" type="text" name="residual_payment_value_tag" id="residual_payment_value_tag" placeholder="$"  pattern="[0-9]*">
+													<input class="input100 input100-basics " type="text" name="residual_payment_value_tag" id="residual_payment_value_tag" placeholder="$"  pattern="[0-9]*">
 													<span class="focus-input100"></span>
 												</div>
 											</div>
@@ -216,25 +187,11 @@
 									</div>
 
 									<!-- Timeline -->
-									<div class="timeline_div_out">
+									<div>
 										<span class="contact100-form-title">Línea de Tiempo</span>
 										<div class="timeline_div" >
-											<img class="timeline_div_img" id="timeline_div" src="images/timelines/00.03.Elite.png" alt="Descripción del Plan">
+											<img class="timeline_div_img" id="timeline_div" src="images/timelines/00.03.Elite.png" alt="Plan Image">
 										</div>
-									</div>
-
-
-									<!-- The Modal -->
-									<div id="myModal" class="modal">
-
-									  <!-- The Close Button -->
-									  <span class="close">&times;</span>
-
-									  <!-- Modal Content (The Image) -->
-									  <img class="modal-content" id="img01">
-
-									  <!-- Modal Caption (Image Text) -->
-									  <div id="caption"></div>
 									</div>
 
 				</form>
@@ -250,7 +207,7 @@
 							<div class="left center_title">
 								<span class="label-input100 label-input100-basics"><i class="fa fa-credit-card"></i> Cuota Mes</span>
 								<!-- <span class="input100" id="monthly_payment_tag"></span> -->
-								<input class="input100 input100-basics numMask center-content" type="text" name="monthly_payment_tag" id="monthly_payment_tag" disabled>
+								<input class="input100 input100-basics  center-content" type="text" name="monthly_payment_tag" id="monthly_payment_tag" disabled>
 								<span class="focus-input100"></span>
 							</div>
 
@@ -258,7 +215,7 @@
 							<div class="right center_title">
 								<span class="label-input100 label-input100-basics"><i class="fas fa-handshake"></i> Cuota Residual</span>
 								<!-- <span class="input100" id="last_payment_tag"></span> -->
-								<input class="input100 input100-basics numMask center-content" type="text" name="last_payment_tag" id="last_payment_tag" disabled>
+								<input class="input100 input100-basics  center-content" type="text" name="last_payment_tag" id="last_payment_tag" disabled>
 								<span class="focus-input100"></span>
 							</div>
 						</div>
@@ -290,7 +247,7 @@
 									<div class="left">
 										<span class="label-input100 label-input100-basics"><i class="fa fa-usd"></i> Pago Total</span>
 										<!-- <span class="input100" id="total_payment_tag"></span> -->
-										<input class="input100 input100-basics numMask center-content" type="text" name="total_payment_tag" id="total_payment_tag" disabled>
+										<input class="input100 input100-basics  center-content" type="text" name="total_payment_tag" id="total_payment_tag" disabled>
 										<span class="focus-input100"></span>
 									</div>
 
@@ -298,7 +255,7 @@
 									<div class="right">
 										<span class="label-input100 label-input100-basics"><i class="fa fa-credit-card"></i> Total Intereses</span>
 										<!-- <span class="input100" id="total_interest_tag"></span> -->
-										<input class="input100 input100-basics numMask center-content" type="text" name="total_interest_tag" id="total_interest_tag" disabled>
+										<input class="input100 input100-basics  center-content" type="text" name="total_interest_tag" id="total_interest_tag" disabled>
 										<span class="focus-input100"></span>
 									</div>
 								</div>
@@ -328,23 +285,18 @@
 		<!--=====================================EXT=======================================================-->
 		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 		<!--===============================================================================================-->
-		<script src="vendor/bootstrap/js/popper.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<!--===============================================================================================-->
 		<script src="js/ext/jquery.inputmask.bundle.min.js"></script>
 		
 		<!--======================================FINANCE==================================================-->
 		<script src="js/fslacro_min_obf.js"></script>
 		
-		<!--======================================SERVICE WORKERS==========================================-->
-		<script src="index.js"></script>
-		<!--===============================================================================================-->
+		
+		<!--======================================WWW000 HOST===============================================-->
 		<script>
-			/*
 			$(document).ready(function(){
 					$('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
 			});
-			*/
 		</script>
 		<!--===============================================================================================-->
 

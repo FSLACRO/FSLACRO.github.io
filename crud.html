@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/crud.css">
+	<!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous"
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/simulator_full.min.css">
+	<!--===============================================================================================-->
+  <!--</style>-->
+</head>
+
+<body onload="hideSpinner()">
+  <section class="main">
+    <div class="loader loader-default is-active"></div>
+    <div>
+      <button onclick="fetchPlans()" class="btn">Plans</button>
+      <button onclick="showCreatePlan()" class="btn">Create Plan</button>
+    </div>
+    <br />
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Per</th>
+            <th scope="col">N per</th>
+            <th scope="col">Down payment</th>
+            <th scope="col">Residual payment</th>
+            <th scope="col">Grace per</th>
+            <th scope="col">Image url</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="contentTable"></tbody>
+      </table>
+    </div>
+  </section>
+  <hr>
+  <section class="createUpdate">
+    <form autocomplete="off" id="createUpdateForm" method="POST">
+      <input type="hidden" name="_id" id="_id">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div>
+        <label for="rate">Rate</label>
+        <input type="text" name="rate" id="rate" maxlength="7" onkeypress="return isFloat(event, this.id)" required />
+      </div>
+      <div>
+        <label for="per">Per</label>
+        <input type="text" name="per" id="per" maxlength="3" onkeypress="return isInt(event)" required />
+      </div>
+      <div>
+        <label for="nPer">N per</label>
+        <input type="text" name="n_per" id="nPer" maxlength="3" onkeypress="return isInt(event)" required />
+      </div>
+      <div>
+        <label for="downPayment">Down payment</label>
+        <input type="text" name="down_payment" id="downPayment" maxlength="7"
+          onkeypress="return isFloat(event, this.id)" required />
+      </div>
+      <div>
+        <label for="residualPayment">Residual payment</label>
+        <input type="text" name="residual_payment" id="residualPayment" maxlength="7"
+          onkeypress="return isFloat(event, this.id)" required />
+      </div>
+      <div>
+        <label for="gracePer">Grace per</label>
+        <input type="text" name="grace_per" id="gracePer" maxlength="3" onkeypress="return isInt(event)" required />
+      </div>
+      <div>
+        <label for="imageUrl">Image url</label>
+        <input type="text" name="image_url" id="imageUrl" required />
+      </div>
+      <input type="submit" value="Save" />
+    </form>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/crud.js"></script>
+</body>
+
+</html>
