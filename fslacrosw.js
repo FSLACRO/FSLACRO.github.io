@@ -1,5 +1,5 @@
-var main_path_ws = '/fslacro/';
-var cache_name_ws = 'jslc00';
+var main_path_ws = '/fslacro_dev/';
+var cache_name_ws = 'jslc00_dev';
 var default_img_ws = 'images/timelines/00.03.Elite.png'
 
 self.addEventListener('install', function(event) {
@@ -12,8 +12,24 @@ self.addEventListener('install', function(event) {
         main_path_ws + 'simulate.html',
         main_path_ws + 'compare.html',
         // JS
-        main_path_ws + 'js/fslacro_min_obf.js',
-		main_path_ws + 'js/fslacro_comp_min_obf.js',
+        main_path_ws + 'js/app.js',
+		main_path_ws + 'js/app-comparator.js',
+        main_path_ws + 'js/finance.js',
+        main_path_ws + 'js/plan_defaults.js',
+        // JS Util
+        main_path_ws + 'js/util/f_utils.js',
+		
+        main_path_ws + 'js/util/ui_data_binding.js',
+        main_path_ws + 'js/util/ui_listeners.js',
+		
+		main_path_ws + 'js/util/ui_data_binding_comp.js',
+		main_path_ws + 'js/util/ui_data_binding_comp_p1.js',
+		main_path_ws + 'js/util/ui_data_binding_comp_p2.js',
+		
+		main_path_ws + 'js/util/ui_listeners_comp.js',
+		main_path_ws + 'js/util/ui_listeners_comp_p1.js',
+		main_path_ws + 'js/util/ui_listeners_comp_p2.js',
+		
         // JS Ext
         main_path_ws + 'js/ext/jquery.inputmask.bundle.min.js',
         main_path_ws + 'js/ext/jquery-3.3.1.min.js',
@@ -23,11 +39,8 @@ self.addEventListener('install', function(event) {
         main_path_ws + 'vendor/bootstrap/js/bootstrap.min.js',
         main_path_ws + 'vendor/bootstrap/js/popper.js',
         // CSS
-			//main_path_ws + 'css/main.css',
-			//main_path_ws + 'css/util.css',
-		main_path_ws + 'css/common_full.min.css',
-		main_path_ws + 'css/comparator_full.min.css',
-		main_path_ws + 'css/simulator_full.min.css',
+        main_path_ws + 'css/main.css',
+        main_path_ws + 'css/util.css',
         // CSS Bootstrap
         main_path_ws + 'vendor/bootstrap/css/bootstrap.min.css',
         // IMAGES LOGO FOOTER
@@ -40,11 +53,11 @@ self.addEventListener('install', function(event) {
         main_path_ws + 'images/timelines/00.04.Gancho_Premium.png',
         main_path_ws + 'images/timelines/00.05.Taylormade.png',
         main_path_ws + 'images/timelines/00.06.Platinum.png',
-    		// FONTS
-    		main_path_ws + 'fonts/poppins/Poppins-Regular.ttf',
-    		main_path_ws + 'fonts/poppins/Poppins-Medium.ttf',
-    		main_path_ws + 'fonts/poppins/Poppins-Bold.ttf'
-    		// ICONS
+		// FONTS
+		main_path_ws + 'fonts/poppins/Poppins-Regular.ttf',
+		main_path_ws + 'fonts/poppins/Poppins-Medium.ttf',
+		main_path_ws + 'fonts/poppins/Poppins-Bold.ttf'
+   		// ICONS
 
       ]);
     })
