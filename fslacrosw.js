@@ -1,6 +1,6 @@
 /*
-var main_path_ws = '/fslacro_dev/';
-var cache_name_ws = 'jslc00_dev';
+var main_path_ws = '/fslacro/';
+var cache_name_ws = 'jslc00';
 var default_img_ws = 'images/timelines/00.03.Elite.png'
 
 self.addEventListener('install', function(event) {
