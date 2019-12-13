@@ -1,3 +1,4 @@
+/*
 var main_path_ws = '/fslacro_dev/';
 var cache_name_ws = 'jslc00_dev';
 var default_img_ws = 'images/timelines/00.03.Elite.png'
@@ -87,3 +88,4 @@ self.addEventListener('fetch', function(event) {
     }
   }));
 });
+*/
