@@ -1,9 +1,13 @@
-var ORDERS_API = 'https://l87f6pawcf.execute-api.us-east-1.amazonaws.com/production/api/plans';
+const ORDERS_API = `https://l87f6pawcf.execute-api.us-east-1.amazonaws.com/production/api/plans`;
 let contentTable = document.querySelector('.contentTable');
 let loader = document.querySelector('.loader');
 let createUpdate = document.querySelector('.createUpdate');
-let main = document.querySelector('.main');
+//let main = document.querySelector('.main');
+let main = document.querySelector('.main_crud_section');
+let noUpdate = document.querySelector('.noUpdate');
+let onlyInputs = document.querySelector('.onlyInputs');
 let isUpdate = false;
+let isUpdateImage = false;
 
 let createUpdateForm = document.getElementById('createUpdateForm');
 let _id = document.getElementById('_id');
@@ -32,8 +36,10 @@ function hideSpinner() {
 function showCreatePlan() {
   main.style.display = 'none';
   createUpdate.style.display = 'block';
+  enableInputs();
   clearInputs();
   isUpdate = false;
+  isUpdateImage = false;
 }
 
 function fetchPlans() {
@@ -49,7 +55,10 @@ function fetchPlans() {
         loader.style.display = 'none';
       }
     })
-    .catch(error => alert(`HTTP-Error: ${error}`));
+    .catch(error => {
+      loader.style.display = 'none';
+      alert(`HTTP-Error: ${error}`);
+    });
 }
 
 function printTable(data) {
@@ -58,24 +67,32 @@ function printTable(data) {
   data.map(item => {
     contentTable.innerHTML += `
     <tr>
-      <td>${index}</td>
-      <td>${item.name}</td>
-      <td>${item.rate}</td>
-      <td>${item.per}</td>
-      <td>${item.n_per}</td>
-      <td>${item.down_payment}</td>
-      <td>${item.residual_payment}</td>
-      <td>${item.grace_per}</td>
-      <td>${item.image_url}</td>
-      <td>
-        <button onclick="planById('${item._id}')" class="btn">Edit</button>
+      <td class='data_col_min hidden_col'>${index}</td>
+      <td class='data_col_min col-sm-2 col-md-2 col-lg-2'>${item.name}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.rate}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.per}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.n_per}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.down_payment}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.residual_payment}</td>
+      <td class='data_col_min' col-sm-1 col-md-1 col-lg-1>${item.grace_per}</td>
+      <td class='data_col_min hidden_col'>
+        <span>${item.image_url}</span>
+      </td>      
+      <td class='data_col_min col-sm-2 col-md-2 col-lg-2'>
+        <span class='data_col_butt'>
+          <button onclick="planById('${item._id}', 'imageUpdate')" class="btn crud-edit-btn"><i class="far fa-images"></i></button>
+        </span>
       </td>
       <td>
-        <button id="btn_${item._id}" onclick="toggleState('${item._id}', ${
-      item.active
-    });" class="btn">
-        ${item.active == true ? 'Enable' : 'Disable'}
-        </button>
+        <span class='data_col_butt col-sm-2 col-md-2 col-lg-2'>
+          <button onclick="planById('${item._id}', 'dataUpdate')" class="btn crud-edit-btn"><i class="fas fa-edit"></i></button>
+        </span>
+        <span class='data_col_butt'>
+          <button id="btn_${item._id}" onclick="toggleState('${item._id}', ${item.active});" class="btn crud-edit-btn">
+              ${item.active == true ? '<i class="fas fa-toggle-on"></i>' : '<i class="fas fa-toggle-off"></i>'}
+          </button>
+        </span>
+      
       </td>
     </tr>
     `;
@@ -100,14 +117,17 @@ function toggleState(id, state) {
     .then(response => {
       let btn = document.getElementById(`btn_${id}`);
       btn.setAttribute('onClick', `toggleState('${id}', ${!state})`);
-      btn.textContent = !state == true ? 'Enable' : 'Disable';
+      btn.innerHTML = !state == true ? `<i class="fas fa-toggle-on"></i>` : `<i class="fas fa-toggle-off"></i>`;
       fetchMessage(response);
+      loader.style.display = 'none';
     })
-    .catch(error => alert(`HTTP-Error: ${error}`));
-  loader.style.display = 'none';
+    .catch(error => {
+      loader.style.display = 'none';
+      alert(`HTTP-Error: ${error}`);
+    });
 }
 
-function planById(id) {
+function planById(id, context) {
   loader.style.display = 'block';
   fetch(`${ORDERS_API}?_id=${id}`, {
     method: 'GET'
@@ -115,32 +135,46 @@ function planById(id) {
     .then(response => response.json())
     .then(response => {
       if (response.data) {
-        main.style.display = 'none';
-        createUpdate.style.display = 'block';
-        const data = response.data[0];
-        _id.value = data._id;
-        name.value = data.name;
-        rate.value = data.rate;
-        per.value = data.per;
-        n_per.value = data.n_per;
-        down_payment.value = data.down_payment;
-        residual_payment.value = data.residual_payment;
-        grace_per.value = data.grace_per;
-        image_url.value = data.image_url;
-        isUpdate = true;
+        if (context === 'dataUpdate') {
+          main.style.display = 'none';
+          createUpdate.style.display = 'block';
+          onlyInputs.style.display = 'block';
+          const data = response.data[0];
+          _id.value = data._id;
+          name.value = data.name;
+          rate.value = data.rate;
+          per.value = data.per;
+          n_per.value = data.n_per;
+          down_payment.value = data.down_payment;
+          residual_payment.value = data.residual_payment;
+          grace_per.value = data.grace_per;
+          enableInputs();
+          noUpdate.style.display = 'none';
+          image_url.required = false;
+          isUpdate = true;
+        } else if (context === 'imageUpdate') {
+          image_url.value = '';
+          main.style.display = 'none';
+          createUpdate.style.display = 'block';
+          onlyInputs.style.display = 'none';
+          const data = response.data[0];
+          _id.value = data._id;
+          disableInputs();
+          noUpdate.style.display = 'block';
+          image_url.required = true;
+          isUpdate = true;
+          isUpdateImage = true;
+        }
       }
+      loader.style.display = 'none';
     })
-    .catch(error => alert(`HTTP-Error: ${error}`));
-  loader.style.display = 'none';
+    .catch(error => {
+      loader.style.display = 'none';
+      alert(`HTTP-Error: ${error}`);
+    });
 }
 
-function save() {
-  if (confirm('Are you sure you submit?')) {
-    submit();
-  }
-}
-
-createUpdateForm.onsubmit = function (event) {
+createUpdateForm.onsubmit = function(event) {
   event.preventDefault();
   const formData = dataForm();
   if (confirm('Are you sure you submit?')) {
@@ -148,26 +182,7 @@ createUpdateForm.onsubmit = function (event) {
     if (!isUpdate) {
       fetch(`${ORDERS_API}`, {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-        .then(response => response.json())
-        .then(response => {
-          updateView();
-          fetchMessage(response);
-        })
-        .catch(error => alert(`HTTP-Error: ${error}`));
-    } else {
-      fetch(`${ORDERS_API}/${_id.value}`, {
-        method: 'PUT',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+        body: formData
       })
         .then(response => response.json())
         .then(response => {
@@ -176,11 +191,45 @@ createUpdateForm.onsubmit = function (event) {
         })
         .catch(error => {
           loader.style.display = 'none';
-          alert('HTTP-Error:' + error);
+          alert(`HTTP-Error: ${error}`);
         });
+    } else {
+      if (!isUpdateImage) {
+        fetch(`${ORDERS_API}/${_id.value}`, {
+          method: 'PUT',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+          .then(response => response.json())
+          .then(response => {
+            updateView();
+            fetchMessage(response);
+          })
+          .catch(error => {
+            loader.style.display = 'none';
+            alert(`HTTP-Error: ${error}`);
+          });
+      } else {
+        fetch(`${ORDERS_API}/image/${_id.value}`, {
+          method: 'PUT',
+          body: formData
+        })
+          .then(response => response.json())
+          .then(response => {
+            updateView();
+            fetchMessage(response);
+          })
+          .catch(error => {
+            loader.style.display = 'none';
+            alert(`HTTP-Error: ${error}`);
+          });
+      }
     }
   }
-}
+};
 
 function isInt(evt) {
   let charCode = evt.which ? evt.which : event.keyCode;
@@ -201,16 +250,34 @@ function isFloat(evt, id) {
 }
 
 function dataForm() {
-  return {
-    name: name.value,
-    rate: Number(rate.value),
-    per: Number(per.value),
-    n_per: Number(n_per.value),
-    down_payment: Number(down_payment.value),
-    residual_payment: Number(residual_payment.value),
-    grace_per: Number(grace_per.value),
-    image_url: image_url.value
-  };
+  if (!isUpdate) {
+    const formData = new FormData();
+    formData.append('name', name.value);
+    formData.append('rate', Number(rate.value));
+    formData.append('per', Number(per.value));
+    formData.append('n_per', Number(n_per.value));
+    formData.append('down_payment', Number(down_payment.value));
+    formData.append('residual_payment', Number(residual_payment.value));
+    formData.append('grace_per', Number(grace_per.value));
+    formData.append('image_url', image_url.files[0]);
+    return formData;
+  } else {
+    if (!isUpdateImage) {
+      return {
+        name: name.value,
+        rate: Number(rate.value),
+        per: Number(per.value),
+        n_per: Number(n_per.value),
+        down_payment: Number(down_payment.value),
+        residual_payment: Number(residual_payment.value),
+        grace_per: Number(grace_per.value)
+      };
+    } else {
+      const formData = new FormData();
+      formData.append('image_url', image_url.files[0]);
+      return formData;
+    }
+  }
 }
 
 function clearInputs() {
@@ -223,6 +290,28 @@ function clearInputs() {
   residual_payment.value = '';
   grace_per.value = '';
   image_url.value = '';
+  image_url.required = true;
+  noUpdate.style.display = 'block';
+}
+
+function disableInputs() {
+  name.required = false;
+  rate.required = false;
+  per.required = false;
+  n_per.required = false;
+  down_payment.required = false;
+  residual_payment.required = false;
+  grace_per.required = false;
+}
+
+function enableInputs() {
+  name.required = true;
+  rate.required = true;
+  per.required = true;
+  n_per.required = true;
+  down_payment.required = true;
+  residual_payment.required = true;
+  grace_per.required = true;
 }
 
 function fetchMessage(json) {
@@ -235,6 +324,7 @@ function fetchMessage(json) {
 
 function updateView() {
   createUpdate.style.display = 'none';
+  onlyInputs.style.display = 'block';
   main.style.display = 'block';
   loader.style.display = 'none';
   fetchPlans();
@@ -242,5 +332,20 @@ function updateView() {
 
 function showTable() {
   createUpdate.style.display = 'none';
+  onlyInputs.style.display = 'block';
+  noUpdate.style.display = 'block';
   main.style.display = 'block';
+}
+
+function validateImage() {
+  let file = image_url.files[0];
+  let type = file.type.split('/').pop().toLowerCase();
+  if (type != "jpeg" && type != "jpg" && type != "png" && type != "gif") {
+      alert('Please select a valid image file');
+      image_url.value = '';
+  }
+  if (file.size > 1024000 * 5) {
+      alert('Max Upload size is 5MB only');
+      image_url.value = '';
+  }
 }
