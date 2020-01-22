@@ -68,23 +68,23 @@ function printTable(data) {
     contentTable.innerHTML += `
     <tr>
       <td class='data_col_min hidden_col'>${index}</td>
-      <td class='data_col_min col-sm-2'>${item.name}</td>
-      <td class='data_col_min col-sm-1'>${item.rate}</td>
-      <td class='data_col_min col-sm-1'>${item.per}</td>
-      <td class='data_col_min col-sm-1'>${item.n_per}</td>
-      <td class='data_col_min col-sm-1'>${item.down_payment}</td>
-      <td class='data_col_min col-sm-1'>${item.residual_payment}</td>
-      <td class='data_col_min' col-sm-1>${item.grace_per}</td>
+      <td class='data_col_min col-sm-2 col-md-2 col-lg-2'>${item.name}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.rate}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.per}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.n_per}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.down_payment}</td>
+      <td class='data_col_min col-sm-1 col-md-1 col-lg-1'>${item.residual_payment}</td>
+      <td class='data_col_min' col-sm-1 col-md-1 col-lg-1>${item.grace_per}</td>
       <td class='data_col_min hidden_col'>
         <span>${item.image_url}</span>
       </td>      
-      <td class='data_col_min col-sm-1'>
+      <td class='data_col_min col-sm-2 col-md-2 col-lg-2'>
         <span class='data_col_butt'>
           <button onclick="planById('${item._id}', 'imageUpdate')" class="btn crud-edit-btn"><i class="far fa-images"></i></button>
         </span>
       </td>
       <td>
-        <span class='data_col_butt col-sm-2'>
+        <span class='data_col_butt col-sm-2 col-md-2 col-lg-2'>
           <button onclick="planById('${item._id}', 'dataUpdate')" class="btn crud-edit-btn"><i class="fas fa-edit"></i></button>
         </span>
         <span class='data_col_butt'>
