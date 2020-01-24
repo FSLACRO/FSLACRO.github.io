@@ -77,12 +77,20 @@ function printTable(data) {
       <td class='data_col_min' col-sm-1 col-md-1 col-lg-1>${item.grace_per}</td>
       <td class='data_col_min hidden_col'>
         <span>${item.image_url}</span>
-      </td>      
+      </td>    
+      <!--
       <td class='data_col_min col-sm-2 col-md-2 col-lg-2'>
         <span class='data_col_butt'>
           <button onclick="planById('${item._id}', 'imageUpdate')" class="btn crud-edit-btn"><i class="far fa-images"></i></button>
         </span>
       </td>
+      -->
+      <!--
+      <td>
+        <button onclick="planById('${item._id}', 'imageUpdate')" class="btn">Change image</button>
+      </td>
+      -->
+      
       <td>
         <span class='data_col_butt col-sm-2 col-md-2 col-lg-2'>
           <button onclick="planById('${item._id}', 'dataUpdate')" class="btn crud-edit-btn"><i class="fas fa-edit"></i></button>
@@ -149,7 +157,8 @@ function planById(id, context) {
           residual_payment.value = data.residual_payment;
           grace_per.value = data.grace_per;
           enableInputs();
-          noUpdate.style.display = 'none';
+          /*noUpdate.style.display = 'none';*/
+          /*noUpdate.style.display = 'block';*/
           image_url.required = false;
           isUpdate = true;
         } else if (context === 'imageUpdate') {
