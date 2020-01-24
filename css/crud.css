@@ -875,7 +875,7 @@ div.crud_section_container{
   border-top-right-radius: 10px;
 }
 .main_crud_section{
-  width: 100%
+  width: 100%;
 }
 /*
 table#crud_plans_table td {
