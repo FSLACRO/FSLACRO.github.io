@@ -170,7 +170,7 @@ function planById(id, context) {
           _id.value = data._id;
           disableInputs();
           noUpdate.style.display = 'block';
-          image_url.required = true;
+          image_url.required = false;  // true
           isUpdate = true;
           isUpdateImage = true;
         }
