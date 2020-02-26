@@ -1,4 +1,5 @@
-const ORDERS_API = `https://l87f6pawcf.execute-api.us-east-1.amazonaws.com/production/api/plans`;
+//const ORDERS_API = `https://l87f6pawcf.execute-api.us-east-1.amazonaws.com/production/api/plans`;
+const ORDERS_API = `https://financial-plans.ivchip.now.sh/api/plans`;
 let contentTable = document.querySelector('.contentTable');
 let loader = document.querySelector('.loader');
 let createUpdate = document.querySelector('.createUpdate');
@@ -172,7 +173,8 @@ function planById(id, context) {
           noUpdate.style.display = 'block';
           image_url.required = false;  // true
           isUpdate = true;
-          isUpdateImage = true;
+          //isUpdateImage = true;
+          isUpdateImage = false;
         }
       }
       loader.style.display = 'none';
@@ -185,6 +187,7 @@ function planById(id, context) {
 
 createUpdateForm.onsubmit = function(event) {
   event.preventDefault();
+  isUpdateImage = true; /// test image
   const formData = dataForm();
   if (confirm('Are you sure you submit?')) {
     loader.style.display = 'block';
