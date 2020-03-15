@@ -1,4 +1,4 @@
-Aplicación Simulador Financiero
+Aplicación Simulador Financiero.	 DEPRECATED
 
 Se requiere una aplicación que pueda simular escenarios de crédito vehicular.
 
