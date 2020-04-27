@@ -58,10 +58,7 @@
 					<!--<span class="contact100-form-title">Crédito</span>-->
 
 					<!-- Select Plan -->
-					<div class="select_container">
-						<select class="plan_selector" id="plan_name_tag">
-						</select>
-					</div>
+					<div class="select_container"><select class="plan_selector" id="plan_name_tag"></select></div>
 
 					<!-- Price and Rate-->
 					<div class="">
@@ -98,7 +95,7 @@
 												<!-- <input class="input100 input100-basics independent-field" type="text" name="rate_tag" id="rate_tag" placeholder=""> -->
 												<input 
 													class="input100 input100-basics independent-field" 
-													type="text" name="rate_tag" id="rate_tag" placeholder="%"
+													type="text" name="rate_tag" id="rate_tag" placeholder=""
 												>
 											</div>
 											<div class="percentSymbol">
@@ -113,7 +110,8 @@
 					</div>
 
 					<!-- Term - Periods: period size and number of periods -->
-					<div class="" hidden>
+					<!--
+					<div class="">
 						<div class="leftPercent">
 							<div class="wrap-input100">
 								<span class="label-input100 label-input100-basics">Cantidad de períodos <span class="required-highlight">*</span></span>
@@ -130,19 +128,20 @@
 						</div>
 						<div class="rightPercent">
 							<div class="wrap-input100 validate-input" data-validate="Ingrese el interés">
-								<span class="label-input100 label-input100-basics">Tamaño del período</span>
+								<span class="label-input100 label-input100-basics">Pagos</span>
 								<div class="single-icon">
 									<div class="left-input">
 										<div class="fa-icon-center"><i class="far fa-calendar-alt"></i></div>
 									</div>
 									<div class="right-input">
-										<input class="input100 input100-basics req-field independent-field" type="number" min="0" name="per_tag" id="per_tag" placeholder="Meses por periodo">
+										<select class="per_selector" id="per_tag"></select>
 										<span class="focus-input100"></span>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					-->
 
 					<!-- Grace and Total Months -->
 					<div class="">
@@ -297,7 +296,7 @@
 
 							<!-- Interests -->
 							<div class="right center_title">
-								<span class="label-input100 label-input100-basics"><i class="fas fa-handshake"></i> Cuota Residual</span>
+								<span class="label-input100 label-input100-basics"><i class="fas fa-handshake"></i> Cuota Final</span>
 								<!-- <span class="input100" id="last_payment_tag"></span> -->
 								<input class="input100 input100-basics numMask center-content" type="text" name="last_payment_tag" id="last_payment_tag" disabled>
 								<span class="focus-input100"></span>
